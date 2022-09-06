@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Product, ProductCategory
 # Контролер задается функцией
 
 def index(request): #  В качестве аргумента идет request
@@ -71,3 +72,6 @@ def products_classic(request):
 	}
 	return render(request, 'mainapp/products.html', context=context)
 
+
+def main(request):
+	title = 'Главная'
